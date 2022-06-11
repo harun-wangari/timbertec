@@ -1,0 +1,178 @@
+<html>
+
+<head>
+    <title>WELCOME TO TIMBERTEC LIMITED</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static',filename='font-awesome.min.css')}}" />
+    <link rel="icon" href="{{url_for('static',filename='favicon.ico')}}">
+    <!-- Start of Async Callbell Code -->
+    <script>
+        window.callbellSettings = {
+            token: "9zKbG17DdZSFpjUUmfW2PXS3"
+        };
+    </script>
+    <script>
+        (function () { var w = window; var ic = w.callbell; if (typeof ic === "function") { ic('reattach_activator'); ic('update', callbellSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Callbell = i; var l = function () { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://dash.callbell.eu/include/' + window.callbellSettings.token + '.js'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()
+    </script>
+    <!-- End of Async Callbell Code -->
+</head>
+
+<body>       
+    <div class="navigation">
+        <div class="row">
+            <img src="static/images/Tec_logo.jpg" class="logo">
+            <form class="searchcon navbar-form form-right" style="padding:0;margin:1vh;" autocomplete="off">
+                <span class="autocomplete" id="autocomplete" data-products='["ones"]'>
+                    <input type="text"  id="txtsearch" class="txtsearch" placeholder="Search Items">
+                </span>
+                <span class="fa fa-search searchicon"></span>
+                <button type="button" class="btn btn-success" id="btnsearch">Search</button>
+                <button type="button" class="btn btn-warning" id="btnquotation" style="color:#222"><span class="itemnumber" id="itemnumber">0</span> <span class="fa fa-shopping-cart"></span>Get Quotation</button>
+            </form>
+        </div>
+                
+        <nav class="navbar navbar-inverse sticky-top" role="navigation">
+            <a class="navbar-brand" href="#" style="background-color: rgb(207, 206, 206);color:rgb(1, 47, 61);font-size:2vh;" id="btncategory">
+                Shop By Categories <span class="fa fa-angle-down" aria-hidden="true"> </span>
+            </a>
+           
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            </div>
+           
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a href="/" class="nav-link active" style="color:white" >PRODUCTS</a></li>
+                    <li class="nav-item"><a href="services" class="nav-link" style="color:white" >SERVICES</a></li>
+                    <li class="nav-item"><a href="workshop" class="nav-link" style="color:white" >WORKSHOP</a></li>
+                    <li class="nav-item"><a href="about" class="nav-link" style="color:white" >ABOUT</a></li>
+                </ul>
+            </div>
+            <span style="position:absolute;float:right;right:70px;top:10px;font-size:calc(6px + 0.8vh);">Mpesa PayBill: 763766<br>Account no: 0766934197</span>
+        </nav>
+    </div>
+    <div class="maincon">
+    <div class="sidenav" id='sidenav'>
+        
+        <ul class="sidenavmenu" id="sidenavmenu">
+            <li class="sidenavmenuitem" id="Office Desks">Office Desks</li>
+            <li class="sidenavmenuitem" id="Office Cabinets">Office Cabinets</li>
+            <li class="sidenavmenuitem" id="Wardrobes Shelves">Wardrobes Shelves</li>
+            <li class="sidenavmenuitem" id="Kitchen Shelves">Kitchen Shelves</li>
+            <li class="sidenavmenuitem" id="Doors">Doors</li>
+            <li class="sidenavmenuitem" id="Frames">Frames</li>
+            <li class="sidenavmenuitem" id="Kitchen Cabinets">Kitchen Cabinets</li>
+            <li class="sidenavmenuitem" id="Locks">Locks</li>
+            <li class="sidenavmenuitem" id="Ceilings">Ceiling</li>
+            <li class="sidenavmenuitem" id="Timber/Boards">Timber/Boards</li>
+            <li class="sidenavmenuitem" id="Floors">Floors</li>
+            <li class="sidenavmenuitem" id="Stairs">Stairs</li>
+            <li class="sidenavmenuitem" id="Paints">Paints</li>
+        </ul>
+    </div>
+    <div class="itemcon row" id="itemcon">
+        <span class="fa fa-spinner fa-spin" id="loading" style="position:absolute;font-size:30px;top:50%;left:50%;transform:translate(-50%,-50%)"></span>
+        <!--
+            items goes here
+        -->
+        </div>
+        <div class="message-con container-fluid" id="message-con">
+            <div class="message" id="message" style="top:25%;">
+                <input type="button" value="X" class="btnclosemsg" id="btnclosemsg">
+                <h5 id="title" class="msgtitle"></h5>
+                <p id="messagefield"></p>
+                <div class="btn-group" id="buttons" style="display:none">
+                    <input type="button" value="Delete" class="btn btn-danger" id="btndelete">
+                    <input type="button" value="Cancel" class="btn btn-success" id="btncancel">
+                </div>
+            </div>
+        </div>
+        <div class=" listcon hidden" id="listcon">
+            <div class="quotationlist col-xs-12 col-sm-7" id="tablecon">
+                <h4 align='center'>Get quotation for the following items</h4>
+                <input type="button" value="X" id="btncloselist" class="btncloselist">
+                <table class="table table-striped table-responsive">
+                    <thead>
+                        <tr style="  background-color:rgb(5, 113, 121);height:50px;color:white;font-size:calc(9px + 0.5vw);">
+                            <th>Image</th>
+                            <th style="width:200;border:solid 1px white;">Name</th>
+                            <th style="border:solid 1px white;">Dimension</th>
+                            <th style="border:solid 1px white;">Color</th>
+                            <th style="border:solid 1px white;">Quantity</th>
+                            <th style="border:solid 1px white;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableitem">
+        
+                    </tbody>
+                </table>
+                <form action="" style="text-align:left">
+                    <h5 align='center' style="color:rgb(20, 168, 194)">Enter your details below to submit your request</h5>
+                    <label for="productname">Full Name</label>
+                    <div class="form-group">
+                        <input type="text" id="txtfullname" class="form-control" placeholder="Customer Fullname">
+                        <span class="fa fa-user addon"></span>
+                    </div>
+                    <label for="productname">Phone Number</label>
+                    <div class="form-group">
+                        <input type="tel" id="txtphone" class="form-control" placeholder="Telephone" maxlength="10">
+                        <span class="fa fa-phone addon"></span>
+                    </div>
+                    <label for="productname">Email Address</label>
+                    <div class="form-group">
+                        <input type="text" id="txtemail" class="form-control" placeholder="Email Address">
+                        <span class="fa fa-envelope addon"></span>
+                    </div>
+                    <input type="button" value="Get Quotation" id="btnsubmit" class="btn btn-success form-control">
+                </form>
+            </div>
+        </div>
+        <footer id="footer" class="footer sticky-bottom">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="static/images/Tec_logo.jpg" style="width:80%;height:80px;">
+                        <p>&copy;Timbertec Limited Copy Right 2020</p>
+                    </div>
+                    <div class="col-md-4">
+                        <hr class="dark">
+                        <h4>Reach us through </h4> 
+                        <hr style="color:#222">
+                        <p>
+                            <span class="fa fa-phone contacticon"></span>0791325409 or
+                        </p>
+                        <p>
+                            <span class="fa fa-phone contacticon"></span> 0714591767
+                        </p>
+                        <p>
+                            <span class="fa fa-envelope contacticon"></span>enquiries@timberteclimited.co.ke
+                        </p>
+                    </div>
+                    <div class="col-md-4"> 
+                        <hr style="color:#222">
+                        <h4><span class="fa fa-clock-o" aria-hidden="true" style="color: gray"></span>Working Hrs</h4>
+                        <hr style="color:#222">
+                            <p>Monday-Friday: 7:30am-6pm </p>
+                            <p>Saturday : 7:30am-5pm</p>
+                            <p>Sunday   : closed</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="{{url_for('static',filename='jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='timbertec.js')}}"></script>
+    <script src="{{url_for('static',filename='home.js')}}"></script>
+</body>
+
+</html>

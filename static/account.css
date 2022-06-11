@@ -1,0 +1,118 @@
+
+.container-fluid {
+    position: relative;
+    top: -15px;
+    overflow: auto;
+    margin: 0;
+    height: 91.5vh;
+        overflow: auto;
+}
+
+.mainpanel {
+    color: white;
+    position: relative;
+    left: 0.5vw;
+    margin-top: 3.5vw;
+    background-color: rgb(218, 215, 215);
+    opacity: 0.9;
+    height: 83%;
+    width: 99vw;
+    border-radius: 8px;
+    padding: 1vw;
+    overflow: auto;
+    border-bottom: 5px;
+    bottom: 20px;
+}
+
+.form{
+    text-align:center;
+    position: relative;
+    background-color: gray;
+    width: calc(200px + 40%);
+    border-radius: 10px;
+    top:2%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 2%;
+    padding-top: 5%;
+    box-shadow: 2px 2px 2px 2px #222;
+}
+
+.form-group{
+    background-color:rgb(199, 192, 192);
+    position: relative;
+    padding-left: 30px;
+    transition: 3s;
+    border-radius: 4px;
+}
+
+.form-group .form-control:focus + span {
+    background-color: white;
+}
+
+.addon{
+    position: absolute;
+    left: 0px;
+    top:0;
+    height: 100%;
+    width: 30px;
+    background-color: transparent;
+    padding-top: 10px;
+    padding-left: 7px;
+    border-radius: 4px;
+} 
+
+.logo{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    top:-50px;
+}
+
+.control-label{
+    color: rgb(207, 81, 23);
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.btn-signup{
+    margin: 10px;
+    width: 20px;
+    height: 40px;
+    background-color: rgb(0, 140, 255);
+    color: white;
+    border-radius: 5px;
+    width: 100%
+}
+
+.btn-signup:hover{
+    background-color: rgb(0, 204, 255);
+    box-shadow: 1px 1px white;
+}
+
+.alert{
+    background-color: #33DDDD;
+    border: none;
+}
+
+.error{
+    position: relative;
+    left: -25px;
+    text-align: center;
+    height: auto;
+    width: calc(100% + 25px);
+    color: rgb(148, 48, 48);
+    background-color: white;
+}
+
+.msg{
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+    width: 100%;
+    color:green;
+    background-color: wheat;
+    border-radius: 5px;
+}

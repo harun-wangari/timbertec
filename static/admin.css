@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.container-fluid {
+    position: relative;
+    top: -15px;
+    overflow: auto;
+    margin: 0;
+    height: 91.5vh;
+    perspective: 1000px;
+}
+
+.menuitem:hover{
+    background-color: dodgerblue;
+}
+
+.dropdown:hover{
+    background-color: rgb(31, 218, 224);
+    color: #222;
+}
+
+.selected{
+    color: white;
+    background-color: dodgerblue;
+}
+
+.mainpanel {
+    color: rgb(5, 0, 0);
+    position: absolute;
+    left: 0;
+    margin: 0;
+    padding:0;
+    background-color: white;
+    opacity: 0.9;
+    height: calc(75vh);
+    width: 100%;
+    border-radius: 8px;
+    overflow: auto;
+    border-bottom: 5px;
+    transition: all linear 1s;
+    animation: fadein ease 02s;
+    z-index: 1;
+}
+
+.loading {
+    color: rgb(5, 0, 0);
+    position: absolute;
+    left: 1.8%;
+    padding-left: 5vw;
+    padding-top: 25vh;
+    padding-right: 4vw;
+    padding-bottom: 4vh;
+    background-color: rgb(214, 213, 213);
+    opacity: 0.9;
+    height: calc(78vh);
+    width: 99vw;
+    border-radius: 8px;
+    border-bottom: 5px;
+    z-index: 9;
+}
+
+
+.form {
+    position: relative;
+    top: 4%;
+    padding: 10px;
+    border: 1px solid rgb(229, 230, 231);
+    width: calc(200px +55%);
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px #222;
+    background-color: rgb(245, 245, 245);
+    backface-visibility: hidden;
+    height: auto;
+}
+
+.table-con{
+    position: relative;
+    margin-right: 3vw;
+    background-color: whitesmoke;
+    margin-top: 6vh;
+    height: 65vh;
+    border:solid 1px  rgb(6, 142, 167);
+    border-radius: 8px;
+    overflow: auto;
+    box-shadow: 2px 2px 2px 2px #222;
+}
+
+.product-table{
+    position: relative;
+    background-color: whitesmoke;
+    margin-top: 6vh;
+    margin:5px;
+    padding: 1vw;
+    border:solid 1px  rgb(6, 142, 167);
+    border-radius: 8px;
+}
+
+.table-row{
+    height:50px;
+    border: solid 1px rgb(12, 106, 143) ;
+}
+
+.table-row:hover{
+    background-color: rgb(65, 62, 62);
+    color: white;
+}
+
+thead,th{
+    position:sticky;
+    top:0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.itempic {
+    width:50px;
+    padding: 5px;
+    height: 1vh;
+    border-radius: 5px;
+}
+
+.update{
+    display: none;
+}
+
+.form-group .form-control:focus+span {
+    background-color: dodgerblue;
+}
+
+.heading {
+    color:rgb(0, 1, 2);
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 20px;
+    box-shadow: 2px 2px 2px 2px #222;
+}
+
+.picupload{
+    height: 90%;
+}
+.image {
+    position: relative;
+    height: 30vh;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 8px solid rgb(11, 126, 202);
+    box-shadow: 4px 4px 4px 4px rgb(151, 208, 235);
+    border-radius: 4px;
+}
+
+input {
+    margin: 30px;
+}
+
+.btn {
+    position: relative;
+    margin: 10px;
+    width: 100px;
+    float: right
+}
+
+.btn-group{
+    position: relative;
+    float: right;
+    bottom: 10px;
+}
+
+.filecon {
+    background-color: transparent;
+}
+
+.file {
+    width: 55%;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+}
+
+.more {
+    width: 280px;
+    color: aqua;
+}
+
+.more .fa {
+    position: relative;
+    float: right;
+    color: rgb(47, 97, 84);
+}
+
+#update,#request{
+    z-index: 2;
+    background-color: rgb(223, 221, 221);
+    margin: 0;
+    left: 0;
+}
+
+#delete{
+    font-size: calc(10px + 2vw);
+    color: rgb(223, 74, 5);
+    padding-left: 0vw;
+}
+
+#edit{
+    font-size: calc(10px + 2vw);
+    color: rgb(4, 150, 218);
+    padding-right: 3.5vw;
+}
+
+#edit:hover{
+    font-size: calc(15px + 2vw);
+    color: rgb(18, 179, 130);
+}
+
+
+#delete:hover{
+    font-size: calc(15px + 2vw);
+    color:rgb(231, 47, 47);
+}
+
+.productdetails{
+    padding-top: 40px;
+}
+
+a{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+.hidden{
+    display:block;
+}
+
+.total{
+    text-align:right;
+    padding-right:10px;
+}
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

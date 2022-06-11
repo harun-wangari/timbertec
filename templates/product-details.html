@@ -1,0 +1,94 @@
+<title>PRODUCT DETAILS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{{url_for('static',filename='home.css')}}" />
+<link type="text/css" rel="stylesheet" href="{{url_for('static',filename='productdetails.css')}}" />
+<link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}" />
+<link rel="stylesheet" href="{{url_for('static',filename='font-awesome.min.css')}}" />
+</head>
+
+<body>
+    <div class="navigation">
+        <div class="row">
+            <img src="static/images/Tec_logo.jpg" class="logo">
+        </div>
+
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="background-color: rgb(207, 206, 206);color:rgb(1, 47, 61);font-size:2vh;">Product Details</a>
+                <button type="button" style="margin:10px;background-color:transparent;border:none;" id="btnback"><span class="fa fa-arrow-circle-left"
+                        style="font-size:30px"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a href="/" class="nav-link active" style="color:white">PRODUCTS</a></li>
+                    <li class="nav-item"><a href="services" class="nav-link" style="color:white">SERVICES</a></li>
+                    <li class="nav-item"><a href="workshop" class="nav-link" style="color:white" >WORKSHOP</a></li>
+                    <li class="navi-item"><a href="about" class="nav-link" style="color:white">ABOUT</a></li>
+            </div>
+            <span style="position:absolute;float:right;right:70px;top:10px;font-size:calc(6px + 0.8vh);">Mpesa PayBill: 763766<br>Account no: 0766934197</span>
+        </nav>
+    </div>
+    <div class="productcon container-fluid" id="itemcon">
+        
+            <div class="productdetails col-sm-7">
+                <div class="col-sm-6">
+                    <span id="colorbox" class="colorbox hidden"></span>
+                    <img src="{{url_for('static',filename='images/item.jpg')}}" class="productpic" id="productpic" width="100%">
+                </div>
+                <div class="col-sm-6 details">
+                    <h5 style="color:black;font-weight:bold;">Product Name</h5>
+                    <label class="form-label" id="productname">Product Name</label>
+                    <h5 style="color:black;font-weight:bold;">Color</h5>
+                    <label class="form-label" id="productcolor">Color</label>
+                    <div class="hidden" id="colorcon" style="border:solid 1px rgb(187, 109, 6);border-radius:4px;">
+                        <label for="" style="font-weight:bold;">Pick Your Color:</label> <input type="color" id="colorpicker" style="width:80px;height:40px;margin:10px;" value="#aaaaaa">
+                    </div>
+                    <h5 style="color:black;font-weight:bold;">Size/Quantity</h5>
+                    <label class="form-label" id="productdimension">Size/Qty</label>
+                </div>
+                <textarea class="form-control" id="txtdescription" rows="5" disabled placeholder="PRODUCT DETAILS" ></textarea>
+                <form action="" class="col-sm-12 details"  style="padding-top:0;">
+                    <label class="form-label" style="color:black;">Quantity</label>
+                    <div class="form-group">
+                        <span class="fa fa-cubes addon"></span>
+                        <input type="number" value="1" min=1 max=100 id="quantity" class="form-control">
+                    </div>
+                    <button type="button" id="btnadd" class="btn btn-warning" style="width:100%;">
+                        <span class="fa fa-shopping-cart"></span>
+                        Add To Quotation List
+                    </button>
+                </form>
+            </div>
+        <div class="container col-sm-5 relatedproducts">
+            <div id="relateditems" class="row" style="padding-left:3vw;">
+                <h4 align='center' style="text-decoration:underline">Related Products</h4>
+            </div>
+        </div>
+    </div>
+    <div class="footer" id="footer">@ Timbertec Limited Copy Right 2020</div>
+    <div class="message-con container-fluid" id="message-con">
+        <div class="message" id="message">
+            <input type="button" value="X" class="btnclosemsg" id="btnclosemsg">
+            <h5 id="title" class="msgtitle"></h5>
+            <p id="messagefield"></p>
+            <div class="btn-group" id="buttons" style="display:none">
+                <input type="button" value="Delete" class="btn btn-danger" id="btndelete">
+                <input type="button" value="Cancel" class="btn btn-success" id="btncancel">
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('static',filename='jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='color.js')}}"></script>
+    <script src="{{url_for('static',filename='timbertec.js')}}"></script>
+    <script src="{{url_for('static',filename='productdetails.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMBERTEC LIMITED ADMIN</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='admin.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='favicon.ico')}}">
+</head>
+<body>
+
+ <div class="navigation">
+        <div class="row">
+            <img src="static/images/Tec_logo.jpg" class="logo">
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+            data-target="#example-navbar-collapse" id="btnmenu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right" id="menuitems">
+                <li class="menuitem selected" id="home"><a href="#" style="color:white" id="btnaddmenu">Add Product</a></li>
+                <li class="menuitem"><a href="#"  style="color:white" id="btnremovemenu">Update/Delete Product</a></li>
+                <li class="menuitem"><a href="#" style="color:white" id="btnquotationrequest">Quotation Requests</a></li>
+                <li class="dropdown" style="background-color:whitesmoke;">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:dodgerblue;" id="user">
+                    <span class="fa fa-user"></span>
+                    {{user}} <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" style="background-color:whitesmoke;">
+                    <li><a href="{{url_for('settings')}}" class="more"  id="btnremonveuser"  style="color:rgb(13, 136, 158);"><span class="fa fa-gears" style="padding-left:10px;"></span>Account Settings</a></li>
+                    <li class="divider"></li>
+                    <li><a href="{{url_for('logout')}}" class="more"  style="color:rgb(13, 136, 158);"><span class="fa fa-sign-out"></span>Logout</a></li>
+                </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+    <div class="container-fluid">
+        <div class="mainpanel" id="add">
+                <!--add product form-->
+                <form method="POST" class="form container" enctype="multipart/form-data">
+                    <h2 class="heading">ADD PRODUCTS ON THE DATABASE</h2>
+                    <div class="col-sm-5 picupload">
+                        <label for="file">Product Image</label>
+                        <img src="{{url_for('static',filename='images/item.jpg')}}" alt="Item Image" id="image" class="image" style="height: 40vh;">
+                        <div class="form-group filecon">
+                            <input type="file" class="form-control file" name="file" accept="image/*" id="btnuploadimg">
+                        </div>
+                    </div>
+                    <div class="col-sm-7 productdetails">
+                        <label for="productname"> Name</label>
+                        <div class="form-group">
+                            <input type="text" id="name" class="form-control" placeholder="Product name" maxlength="50">
+                            <span class="fa fa-product-hunt addon"></span>
+                        </div>
+                        <label for="productdimension">Dimension/Quantity</label>
+                        <div class="form-group">
+                            <input type="text" id="dimension" class="form-control" placeholder="Product Dimension"  maxlength="20">
+                            <span class="fa fa-exchange addon"></span>
+                        </div>
+                        <label for="cat">Product Color</label>
+                        <div class="form-group">
+                            <span class="fa fa-photo addon"></span>
+                            <select name="cat" id="color" class="form-control">
+                                <option value="" selected name="category">Select Color</option>
+                                <option value="Custom" name="category">Custom</option>
+                                <option value="Black" name="category">Black</option>
+                                <option value="Mahogany" name="category">Mahogany</option>
+                                <option value="White" name="category">White</option>
+                                <option value="Red" name="category">Red</option>
+                                <option value="Brown" name="category">Brown</option>
+                                <option value="Purple" name="category">Purple</option>
+                                <option value="Green" name="category">Green</option>
+                                <option value="Brass" name="category">Brass</option>
+                                <option value="Grey" name="category">Grey</option>
+                                <option value="Blue" name="category">Blue</option>
+                                <option value="Copper" name="category">Copper</option>
+                                <option value="Gold" name="category">Gold</option>
+                                <option value="Silver" name="category">Silver</option>
+                                <option value="Orange" name="category">Orange</option>
+                                <option value="Yellow" name="category">Yellow</option>
+                                <option value="Zinc" name="category">Zinc</option>
+                                <option value="Pink" name="category">Pink</option>
+                                <option value="Teal" name="category">Teal</option>
+                                <option value="Aqua" name="category">Aqua</option>
+                            </select>
+                        </div>
+                        <label for="cat">Product Category</label>
+                        <div class="form-group">
+                            <span class="fa fa-list-ul addon"></span>
+                            <select name="cat" id="cat"  class="form-control">
+                                <option value="" selected name="category">Select Category</option>
+                                <option value="Doors" name="category">Doors</option>
+                                <option value="Locks" name="category">Locks</option>
+                                <option value="Floors" name="category">Floors</option>
+                                <option value="Kitchen Shelves" name="category">Kitchen Shelves</option>
+                                <option value="Desks" name="category">Desks</option>
+                                <option value="Stairs" name="category">Stairs</option>
+                                <option value="Paints" name="category">Paints</option>
+                                <option value="Frames" name="category">Frames</option>
+                                <option value="Office Cabinets" name="category">Office Cabinets</option>
+                                <option value="Kitchen Cabinets" name="category">Kitchen Cabinets</option>
+                                <option value="Wordrope Shelves" name="category">Wardrope Shelves</option>
+                                <option value="Ceilings" name="category">Ceilings</option>
+                                <option value="Timber/Boards" name="category">Timber/Boards</option>
+                            </select>
+                        </div>
+                        <textarea class="form-control" id="description" rows="4" placeholder="PRODUCT DESCRIPTION"  maxlength="60000"></textarea>
+                        <div class="btn-group">
+                            <input type="button" value="Clear" class="btn btn-warning" id="btnclear" style="width:80px;">
+                            <input type="button" value="Add" class="btn btn-success" id="btnadd" style="width:80px;">
+                        </div>
+                    </div>
+                </form>
+        </div>
+        <div class="mainpanel update" id="update">
+            <!--update product form-->
+              
+            <form method="POST" class="form container col-sm-12  col-sm-7" enctype="multipart/form-data" id='form' style="position:relative;top:10px;left:50%;transform:translate(-50%);">
+                <h2 class="heading">UPDATE PRODUCTS ON THE DATABASE</h2>
+                <div class="col-sm-5 picupload">
+                    <label for="file">Product Image</label>
+                    <img src="{{url_for('static',filename='images/item.jpg')}}" alt="Item Image" id="updateimage" class="image">
+                    <div class="form-group filecon">
+                        <input type="file" class="form-control file" name="file" accept="image/*" id="btnupdateuploadimg">
+                    </div>
+                </div>
+                <div class="col-sm-7 productdetails">
+                    <label for="productname"> Name</label>
+                    <div class="form-group">
+                        <input type="text" id="updatename" class="form-control" placeholder="Product name" maxlength="50">
+                        <span class="fa fa-product-hunt addon"></span>
+                    </div>
+                    <label for="productdimension">Dimension/Quantity</label>
+                    <div class="form-group">
+                        <input type="text" id="updatedimension" class="form-control" placeholder="Product Dimension" maxlength="20">
+                        <span class="fa fa-exchange addon"></span>
+                    </div>
+                    <label for="updatecat">Product Color</label>
+                    <div class="form-group">
+                        <span class="fa fa-photo addon"></span>
+                        <select name="cat" id="updatecolor" class="form-control">
+                            <option value="" selected name="category">Select Color</option>
+                                <option value="Custom" name="category">Custom</option>
+                                <option value="Black" name="category">Black</option>
+                                <option value="Mahogany" name="category">Mahogany</option>
+                                <option value="White" name="category">White</option>
+                                <option value="Red" name="category">Red</option>
+                                <option value="Brown" name="category">Brown</option>
+                                <option value="Purple" name="category">Purple</option>
+                                <option value="Green" name="category">Green</option>
+                                <option value="Brass" name="category">Brass</option>
+                                <option value="Grey" name="category">Grey</option>
+                                <option value="Blue" name="category">Blue</option>
+                                <option value="Copper" name="category">Copper</option>
+                                <option value="Gold" name="category">Gold</option>
+                                <option value="Silver" name="category">Silver</option>
+                                <option value="Orange" name="category">Orange</option>
+                                <option value="Yellow" name="category">Yellow</option>
+                                <option value="Zinc" name="category">Zinc</option>
+                                <option value="Pink" name="category">Pink</option>
+                                <option value="Teal" name="category">Teal</option>
+                                <option value="Aqua" name="category">Aqua</option>
+                        </select>
+                    </div>
+                    <label for="cat">Product Category</label>
+                    <div class="form-group">
+                        <span class="fa fa-list-ul addon"></span>
+                        <select name="cat" id="updatecat" class="form-control">
+                            <option value="" selected name="category">Select Category</option>
+                            <option value="Doors" name="category">Doors</option>
+                            <option value="Locks" name="category">Locks</option>
+                            <option value="Floors" name="category">Floors</option>
+                            <option value="Kitchen Shelves" name="category">Kitchen Shelves</option>
+                            <option value="Desks" name="category">Desks</option>
+                            <option value="Stairs" name="category">Stairs</option>
+                            <option value="Paints" name="category">Paints</option>
+                            <option value="Frames" name="category">Frames</option>
+                            <option value="Office Cabinets" name="category">Office Cabinets</option>
+                            <option value="Kitchen Cabinets" name="category">Kitchen Cabinets</option>
+                            <option value="Wordrope Shelves" name="category">Wardrope Shelves</option>
+                            <option value="Ceilings" name="category">Ceilings</option>
+                            <option value="Timber/Boards" name="category">Timber/Boards</option>
+                        </select>
+                    </div>
+                </div>
+                <textarea class="form-control" id="updatedescription" rows="4" placeholder="PRODUCT DESCRIPTION"></textarea>
+                <div class="btn-group">
+                    <input type="button" value="Cancel" class="btn btn-warning" style="width:80px;" id="btnupdatecancel">
+                    <input type="button" value="Update" class="btn btn-success" id="btnupdate" style="width:80px;">
+                </div>
+            </form>
+        </div>
+        <div class="mainpanel update" id="remove">
+            <!--delete product-->
+            <table class="col-sm-6 container product-table table table-striped">
+                <caption>
+                    <label for="cat">View Product By Category</label>
+                    <div class="form-group">
+                        <span class="fa fa-list-ul addon"></span>
+                        <select name="cat" id="viewcat-delete" class="form-control">
+                            <option value="All Products" selected name="category">All Products</option>
+                            <option value="Doors" name="category">Doors</option>
+                            <option value="Locks" name="category">Locks</option>
+                            <option value="Floors" name="category">Floors</option>
+                            <option value="Kitchen Shelves" name="category">Kitchen Shelves</option>
+                            <option value="Desks" name="category">Desks</option>
+                            <option value="Stairs" name="category">Stairs</option>
+                            <option value="Paints" name="category">Paints</option>
+                            <option value="Frames" name="category">Frames</option>
+                            <option value="Office Cabinets" name="category">Office Cabinets</option>
+                            <option value="Kitchen Cabinets" name="category">Kitchen Cabinets</option>
+                            <option value="Wordrope Shelves" name="category">Wardrope Shelves</option>
+                            <option value="Ceilings" name="category">Ceilings</option>
+                            <option value="Timber/Boards" name="category">Timber/Boards</option>
+                        </select>
+                    </div>
+                </caption>
+                <thead>
+                    <tr style="  background-color:rgb(52, 144, 219);height:50px;">
+                        <th>Product image</th>
+                        <th>Product name</th>
+                        <th>Product category</th>
+                        <th>Update/ Delete</th>
+                    </tr>
+                </thead>
+              <tbody id="product-table-delete"  style="font-size: calc(9px + .5vw);">
+
+              </tbody>
+            </table>
+        </div>
+        <div class="mainpanel update" id="quotationrequest">
+            <!--quotation requests page-->
+            
+                <table class="table table-striped table-responsive" style="font-size:calc(9px + 0.5vw);">
+                    <h4 align="center">Active Customer Quotation Requests</h4>
+                        <thead>
+                            <tr style=" background-color:rgb(20, 144, 228);height:30px;">
+                                <th>Customer Name</th>
+                                <th>Telphone</th>
+                                <th>Email Address</th>
+                                <th>Button</th>
+                            </tr>
+                        </thead>    
+                        <tbody id="request-table">
+
+                        </tbody>
+                </table>
+        </div>
+        <div class="mainpanel row" id="request" style="padding:0px;margin:0;display:none;">
+            <form method="POST" class="form col-xs-12 col-sm-6" enctype="multipart/form-data" style="position:relative;top:10px;left:50%;transform:translate(-50%);">
+                <h2 class="heading" id="heading">PRODUCTS TO QUOTE</h2>
+                <span class="hidden" id="email">email</span>
+                <span class="hidden" id="name">name</span>
+                <table class=" product-tabl table table-striped table-responsive" id="quotation-table">
+                    <thead>
+                        <tr style="background-color:rgb(4, 88, 114);height:30px;color:white;font-size:calc(8px + 0.5vw);">
+                            <th>product Name</th>
+                            <th>Dimension</th>
+                            <th>Quantity</th>
+                            <th>Price/item</th>
+                            <th>Total (Ksh)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="item-table">
+
+                    </tbody>
+                </table>
+                <h4 class="col-sm-12">Total Amount<span style="position:relative;float:right;right:-10px;" id="total">0</span></h4>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-warning" style="width:150px;" id="btnrequestcancel">Cancel</button>
+                    <button type="button" class="btn btn-success" id="btnsendresponse" style="width:150px">
+                        <span class="fa fa-send addon"></span>
+                        Send Response
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="row loading hidden" id="loading">
+            <!--loading-->
+           <span class="fa fa-spinner fa-spin" style="position: relative;font-size:50px;left:calc(50% - 20px);transform:translate(-50%);color:black"></span><br>
+           <span style="position: relative;width:300px;left:calc(50% - 150px);font-size:25px;">processing..... please wait</span>
+        </div>
+    </div>
+        <div class="message-con container-fluid" id="message-con">
+            <div class="message" id="message">
+                <input type="button" value="X" class="btnclosemsg" id="btnclosemsg">
+                <h5 id="title" class="msgtitle"></h5>
+                <p id="messagefield"></p>
+                <div class="btn-group" id="buttons" style="display:none">
+                    <input type="button" value="Delete" class="btn btn-danger" id="btndelete">
+                    <input type="button" value="Cancel" class="btn btn-success" id="btncancel">
+                </div>
+            </div>
+        </div>
+    <script src="{{url_for('static',filename='jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='timbertec.js')}}"></script>
+    <script src="{{url_for('static',filename='admin.js')}}"></script>
+
+</body>
+</html>

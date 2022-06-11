@@ -1,0 +1,68 @@
+.title{
+    color: rgb(12, 11, 11);
+    text-align: center;
+}
+
+.mainpanel{
+    height: 72vh;
+    overflow: auto;
+}
+
+.col-xs-3{
+    position: relative;
+    top: 10px;
+    color: #222;
+}
+
+.form{
+    padding-top: 8vw;
+    border: solid rgb(55, 95, 136) 1px;
+    border-left: none;
+    border-radius: 10px;
+}
+
+.form, .edit{
+    padding-top: 8vw;
+}
+
+.edit .row div{
+    padding: 1px;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    margin: 0;
+}
+
+.fa-edit{
+    position: relative;
+    left: 0;
+    padding-top: 0px;
+    color: dodgerblue
+}
+
+.error{
+    position: relative;
+    left: -25px;
+    text-align: center;
+    height: auto;
+    width: calc(100% + 25px);
+    color: rgb(148, 48, 48)e;
+    background-color: whitesmoke;
+}
+
+.col-xs-12{
+    color: rgb(148, 48, 48);
+    text-align: center;
+    background-color:white;
+    margin-top: -8px;
+}
+
+.msg{
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+    width: 100%;
+    color:green;
+    background-color: wheat;
+    border-radius: 5px;
+}

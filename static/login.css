@@ -1,0 +1,102 @@
+
+.container-fluid {
+    position: relative;
+    top: -15px;
+    overflow: auto;
+    margin: 0;
+    height: 91.5vh;
+}
+
+.mainpanel {
+    color: white;
+    position: relative;
+    left: 0.5vw;
+    margin-top: 2vw;
+    background-color: whitesmoke;
+    opacity: 0.9;
+    height: 96%;
+    width: 99vw;
+    border-radius: 8px;
+    padding: 1vw;
+    overflow: auto;
+    border-bottom: 5px;
+}
+
+.form{
+    text-align:center;
+    position: relative;
+    background-color: gray;
+    width: calc(200px + 30%);
+    border-radius: 10px;
+    height:auto ;
+    min-height: 400px;
+    top:15%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 2%;
+    box-shadow: 2px 2px 2px 2px #222;
+}
+
+.form-group{
+    background-color:rgb(199, 192, 192);
+    position: relative;
+    padding-left: 30px;
+    transition: 3s;
+    border-radius: 4px;
+}
+
+.form-group .form-control:focus + span {
+    background-color: white;
+}
+
+.addon{
+    position: absolute;
+    left: 0px;
+    top:0;
+    height: 100%;
+    width: 30px;
+    background-color: transparent;
+    padding-top: 10px;
+    padding-left: 7px;
+    border-radius: 4px;
+} 
+
+.userlogo{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    top:-60px;
+}
+
+.control-label{
+    color: rgb(207, 81, 23);
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.btn-login{
+    position:fixed;
+    left: 2%;
+    height: 40px;
+    background-color: rgb(0, 140, 255);
+    color: white;
+    border-radius: 5px;
+    width: 96%;
+    bottom: 20px;
+}
+
+.btn-login:hover{
+    background-color: rgb(0, 204, 255);
+    box-shadow: 1px 1px white;
+}
+
+.alert{
+    background-color: #33DDDD;
+    border: none;
+}
+
+.fa-send{
+    padding-right: 10px;
+    font-size: 20px;
+}

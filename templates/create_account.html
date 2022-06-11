@@ -1,0 +1,77 @@
+
+<html>
+    <head>
+        <title>Timbertec Limited Signup</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='account.css')}}"/>
+        <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}"/>
+        <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}"/>
+        <link rel="stylesheet" href="{{url_for('static',filename='font-awesome.min.css')}}"/>
+    </head>
+    <body>
+            <div class="navigation">
+                    <div class="row">
+                        <img src="static/images/Tec_logo.jpg" class="logo">
+                    </div>
+            </div>
+  
+    
+          <div class="container-fluid">
+            <div class="row mainpanel">
+                  <form class="form col-sm-6">
+                    <h4 class="title">Add New User Account</h4>
+                    <h5 class="msg hidden" id="msg">{{msg}}</h5>
+                    <div class="form-group">
+                      <span class="fa fa-user addon"></span>
+                      <input type="text" placeholder="SURNAME" class="form-control" id="txtsurname">
+                      <div class="error hidden">error</div>
+                    </div>
+                    <div class="form-group">
+                      <span class="fa fa-male addon"></span>
+                      <input type="text" placeholder="OTHER NAMES" class="form-control" id="txtothernames">
+                      <div class="error hidden">error</div>
+                    </div>
+                    <div class="form-group">
+                      <span class="fa fa-user-plus addon"></span>
+                      <input type="text" placeholder="USERNAME" class="form-control" id="txtusername">
+                      <div class="error hidden">error</div>
+                    </div>
+                    <div class="form-group">
+                      <span class="fa fa-phone addon"></span>
+                      <input type="email" placeholder="EMAIL ADDRESS" class="form-control" id="txtemail">
+                      <div class="error hidden">error</div>
+                    </div>
+                    <div class="form-group">
+                      <span class="fa fa-lock addon"></span>
+                      <input type="password" placeholder="PASSWORD" class="form-control" id="txtpassword">
+                      <div class="error hidden">error</div>
+                    </div>
+                    <div class="form-group">
+                      <span class="fa fa-unlock addon"></span>
+                      <input type="password" placeholder="CONFIRM PASSWORD" class="form-control" id="txtconfirmpassword">
+                      <div class="error hidden">error</div>
+                    </div>
+                    <button type="button" class="form-control btn btn-success" id="btnsignup" style="font-size:16px;font-weight:bold;font-style:italic">
+                      Create Account
+                    </button>
+              
+                  </form>
+            </div>
+          <div class="message-con container-fluid" id="message-con">
+            <div class="message" id="message">
+              <input type="button" value="X" class="btnclosemsg" id="btnclosemsg">
+              <h5 id="title" class="msgtitle"></h5>
+              <p id="messagefield"></p>
+              <div class="btn-group" id="buttons" style="display:none">
+                <input type="button" value="Delete" class="btn btn-danger" id="btndelete">
+                <input type="button" value="Cancel" class="btn btn-success" id="btncancel">
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="footer" id="footer">@ Timbertec Limited Copy Right 2020</div>
+    <script src="{{url_for('static',filename='jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='create-account.js')}}"></script>
+    <script src="{{url_for('static',filename='timbertec.js')}}"></script>
+  </body>
+</html>

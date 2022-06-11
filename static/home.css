@@ -1,0 +1,453 @@
+body {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.tools{
+    padding: 10px;
+    position: relative;
+   
+}
+
+.sitetitle{
+    position: relative;
+    background-image: cross-fade("static/images/Interior.jpg");
+    font-size: 4vw;
+    color: #222;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.searchcon{
+    position: relative;
+    top:1.5vw;
+    right: 10px;
+    float:right;
+    clear: both;
+}
+
+.btn{
+    background-color:rgb(22, 160, 240);
+}
+
+.btn:hover{
+    border: solid white 1px;
+}
+
+.txtsearch{
+    padding-left: 3px;
+    padding-right: 20px;
+    position: relative;
+    border-radius: 5px;
+    font-size: 16px;
+    width: calc(100px + 10vw);
+    height: 35px;
+    font-size: 16px;
+    color: black;
+}
+.searchicon{
+    position: relative;
+    left: -20px;
+    color: #222;
+}
+
+.btnsearch{
+    position: relative;
+    left:-15px;
+    top: 20px;
+}
+
+
+.navigation {
+    position: relative;
+    padding-top: 20px;
+    background-color:rgb(224, 223, 223);
+    height:auto;
+    width: 100%;
+    color: white;
+    transition: top 0.3s;
+    border-radius: 6px;
+    opacity: 0.9;
+    z-index: 5;
+}
+
+.navbar{
+    position: fixed;
+    bottom: 0px;
+    border: none;
+    color: white;
+}
+
+.itemnumber{
+    position: relative;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 11px;
+    top:-5px;
+    font-size: 10px;
+    left:5px;
+    border:solid 1px rgb(146, 102, 6);
+}
+
+.active{
+    background-color: rgb(30, 98, 161);
+    color: rgb(9, 122, 156);
+    font-weight: bold;
+}
+
+.nav-item:hover{
+    background-color: dodgerblue;
+    color: white;
+    font-weight: bold;
+}
+
+.logo {
+    position: relative;
+    left: 20px;
+    height: calc(3vw + 80px);
+    width: calc(40vw + 200px);
+    top: -10px;
+    border-radius: 2px;
+    margin-right: 25px;    
+}
+
+.footer {
+    position: relative;
+    bottom: 5px;
+    padding-top: 0px;
+    background-color:rgb(201, 199, 199);
+    border-radius: 8px;
+    text-align: center;
+    z-index: 10;
+}
+
+.maincon{
+    position: relative;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    top:-20px;
+    clear: both;
+    overflow: auto;
+    height: 80vh;
+}
+
+.sidenav {
+    position: relative;
+    width: 200px;
+    height: calc(78vh - 22px);
+    background-color: rgb(111, 112, 112);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-right: 0;
+    opacity: 0.9;
+    z-index: 5;
+    overflow: auto;
+    clear: both;
+}
+
+.sidenavhide {
+    left:-200px;
+}
+
+
+.sidenavmenu {
+    padding: 5px;
+    padding-right: 0;
+}
+
+.sidenavmenuitem {
+    font-size: 16px;
+    color: white;
+    list-style: none;
+    padding-left: 5px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    padding-right:0;
+    border-radius: 8px;
+    font-size: 2vh;
+    border-bottom: solid rgb(197, 228, 211) 2px;
+}
+
+.sidenavmenuitemactive{
+    background-color: whitesmoke;
+    color: #222;
+}
+
+.sidenavmenuitem:hover {
+    background-color: white;
+    color: black;
+}
+
+.itemcon {
+    position: absolute;
+    top: 0;
+    left: 220px;
+    width: calc(100% - 200px);
+    height: calc(77vh - 22px);
+    padding-left: 0vw;
+    padding-right: 0px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: auto;
+    opacity: 0.9;
+    z-index: 1;
+    clear: both;
+}
+
+.fullitemcon{
+    position: absolute;
+    padding-left: 4vw;
+    padding-right: 2vw;
+    left:0px;
+    width: 100vw;
+    height: calc(76vh - 30px);
+}
+
+
+.items {
+    background-color: rgba(245, 245, 245, 0.815);
+    height: 240px;
+    font-size: calc(9px + .5vw);
+    color: black;
+    border-radius: 5px;
+}
+.items:hover{
+    border: solid rgb(28, 152, 168) 1px;
+    box-shadow: 1px #222;
+}
+
+.itempic {
+    position: relative;
+    width: 75%;
+    left: 12.5%;
+    height: calc(110px + 6vh);
+    border-radius: 3px;
+}
+
+.itemdetail{
+    position: relative;
+    left: 12.5%;
+}
+
+.cattitle{
+    background-color: rgb(27, 125, 253);
+    width: 100%;
+    height: 40px;
+    color: rgb(247, 149, 22);
+    margin: 0;
+    padding: 10px;
+}
+
+.form-group {
+    background-color: rgb(216, 217, 218);
+    position: relative;
+    height: auto;
+    padding-left: 25px;
+    border-radius: 4px;
+}
+
+.addon {
+    position: absolute;
+    color: black;
+    left: 0px;
+    top: 0;
+    height: 35px;
+    width: 30px;
+    background-color: transparent;
+    padding-top: 10px;
+    padding-left: 7px;
+    border-radius: 4px;
+}
+
+.listcon {
+ position: absolute;
+    left: 0;
+    top:-5px;
+    width: 100%;
+    clear: both;
+    padding: 0;
+    overflow: auto;
+    background-color: whitesmoke;
+    height: 78vh;
+    z-index: 5;
+    transition: all linear 0.2s;
+    animation: fadein ease 0.2s;
+}
+
+.fulllist{
+    height: 110vh;
+}
+
+
+.quotationlist{
+    position: absolute;
+    height: 70vh;
+    margin: 0;
+    border: solid 1px rgb(13, 97, 97);
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px #222;
+    padding: 10px;
+    background-color: white;
+    overflow: auto;
+    left: 50%;
+    right: 0;
+    transform: translate(-50%);
+    z-index: 6;
+}
+
+.tableitem{
+    width: 100%;
+}
+
+.btncloselist{
+    position: fixed;
+    float: right;
+    right: 2px;
+    top: 5px;
+    color: crimson;
+}
+
+.table-row{
+    height:50px;
+    border: solid 1px rgb(12, 106, 143) ;
+}
+
+.table-row:hover{
+    background-color: rgb(62, 65, 65);
+    color: rgb(30, 140, 204);
+}
+
+.contacts{
+    padding-left: 10vw;
+    position: relative;
+    background-color: transparent;
+    width: 100vw;
+    text-align: right;
+    padding-right:10px;
+    height: auto;
+    border-radius: 50px;
+    color: white;
+    font-size: calc(8px + 0.8vw);
+    box-shadow: 2px 2px 2px 2px #222;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.contacticon{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: aquamarine;
+}
+
+
+/*messagebox style*/
+.message-con{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: -100%;
+    background-color: transparent;
+    width: 100%;
+    height: 90%;
+    transition: all 400ms;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    z-index: 9;
+}
+
+.message {
+    position:absolute;
+    top: 45vh;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    width: 350px;
+    height: auto;
+    transform:translate( -50%);
+    box-shadow: 4px 4px 4px 4px rgb(38, 39, 39);
+    color: rgb(34, 32, 32);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+}
+
+.msgactive {
+    top: 0;
+}
+
+.btnclosemsg {
+    position: relative;
+    border-radius: 4px;
+    background-color: white;
+    color: rgb(209, 71, 29);
+    font-weight: bolder;
+    float: right;
+    top: -10px;
+    right: -10px;
+}
+
+.msgtitle {
+    color: black;
+    font-size: 12px;
+}
+
+.fa-spin{
+    position: absolute;
+    font-size: 20px;
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  opacity: 0.9;
+  overflow: auto;
+  height: 200px;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #222;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  background-color: #757272;
+  color: rgb(255, 255, 255);
+}
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

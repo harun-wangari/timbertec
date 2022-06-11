@@ -1,0 +1,59 @@
+.maincon {
+    position: relative;
+    text-align: center;
+    top: 7px;
+    padding: 5%;
+    float: left;
+    clear: left;
+    width: 100%;
+    height: calc(77vh - 22px);
+    text-align: left;
+    background-color: rgb(223, 221, 221);
+    border-radius: 10px;
+    overflow: auto;
+    opacity: 0.9;
+    z-index: 3;
+}
+
+
+.item {
+    margin: 10px;
+    padding: 10px;
+    width: 160px;
+    height: 220px;
+    background-color: rgb(247, 244, 244);
+    color: black;
+    border-radius: 5px;
+    float: left;
+}
+
+.itemoffer {
+    margin: 10px;
+    padding: 10px;
+    width: 450px;
+    height: 350px;
+    background-color: rgb(247, 244, 244);
+    color: black;
+    border-radius: 5px;
+    float: left;
+}
+
+.itemoffer:hover{
+    border: solid rgb(28, 152, 168) 2px;
+    box-shadow: 1px;
+}
+
+.itempic {
+    width: 95%;
+    height: 70%;
+    border-radius: 5px;
+}
+
+.cattitle{
+    background-color: rgb(27, 125, 253);
+    width: 100%;
+    height: 40px;
+    color: rgb(247, 149, 22);
+    margin: 0;
+    padding: 10px;
+}

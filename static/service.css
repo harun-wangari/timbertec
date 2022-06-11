@@ -1,0 +1,66 @@
+.maincon {
+    position: relative;
+    text-align: center;
+    top: 0px;
+    padding: 0;
+    float: left;
+    clear: left;
+    width: 100%;
+    height: calc(77vh - 22px);
+    text-align: left;
+    background-color: rgb(223, 221, 221);
+    border-radius: 10px;
+    overflow: auto;
+    opacity: 0.9;
+    z-index: 3;
+}
+
+.services{
+    position: relative;
+    left: 5%;
+    width: 90%;
+}
+
+.carousel .item{
+    position: relative;
+    width: 100%;
+    height: 74vh;
+}
+.item .carouselpic{
+    position: absolute;
+    width: 100vw;
+    height:800vh ;
+    top: 0;
+}
+.clock{
+    position: relative;
+    text-align: center;
+    float: right;
+    color:lightskyblue
+} 
+.location{
+    position: relative;
+    margin: 0;
+    color: black;
+    height: 50%;
+    box-shadow: 2px 2px 2px 2px rgb(30, 76, 114);
+    border-radius: 8px;
+    font-size: 2.2vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.carousel-control{
+    position: relative;
+    padding-top: 15%;
+}
+
+.footer1 {
+    position: fixed;
+    bottom: 2px;
+    width: 100vw;
+    height: 30px;
+    padding-top: 0px;
+    background-color:gainsboro;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 10;
+}
